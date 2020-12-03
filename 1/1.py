@@ -17,6 +17,13 @@ answers = [
     if (i1 != i2) and (a + b == sum_target)
     ]
 print(list(answers))
-
+answers = [
+    a * b * c
+    for i1, a in indexed_entries
+    for i2, b in indexed_entries
+    for i3, c in indexed_entries
+    if len(set([i1,i2,i3])) == 3 and (a + b + c == sum_target)
+    ]
+print(list(answers))
 
 
